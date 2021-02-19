@@ -229,16 +229,16 @@
     display: block;
     position: relative;
     width: 43px;
-    height: 43px;
   }
 }
 
 .page-header__label {
   @media (min-width: @desktop-width) {
     position: absolute;
+    box-sizing: border-box;
     width: 43px;
     height: 43px;
-    top: 0;
+    top: -43px;
     left: 7px;
     background-image: url("../img/ic_help.svg");
     background-repeat: no-repeat;
@@ -329,4 +329,8 @@
 
 .page-header__input:checked ~ .page-header__phone-content {
   display: block;
+}
+
+.page-header__input:focus ~ .page-header__label {
+  border: 1px solid @dark-blue;
 }
