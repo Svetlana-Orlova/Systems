@@ -1,0 +1,273 @@
+.services {
+  margin-top: 26px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+  }
+}
+
+.services-title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.services__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 34px;
+}
+
+.services__item {
+  position: relative;
+  margin: 0 0 34px;
+  width: 100%;
+  color: @black;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 44px 0 55px;
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+.services__item:nth-child(2) {
+  margin-top: 37px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 15px;
+  }
+}
+
+.services__item::after {
+  content: "";
+  position: absolute;
+  width: 102%;
+  height: 1px;
+  background-color: @blue;
+  bottom: -18px;
+  left: 0;
+  margin-left: -10px;
+  padding-right: 10px;
+
+  @media (min-width: @desktop-width) {
+    bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .services__item:last-child::after {
+    display: none;
+  }
+}
+
+.services__item-wrapper {
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+  }
+}
+
+.services__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+.services__label {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 69px;
+  line-height: 3;
+  cursor: pointer;
+  text-align: left;
+  color: @dark-blue;
+  margin-top: 33px;
+
+  @media (min-width: @desktop-width) {
+    cursor: auto;
+    padding-left: 0;
+    margin-top: 0;
+    letter-spacing: -0.5px;
+  }
+}
+
+.services__label--legal-debts {
+  @media (min-width: @desktop-width) {
+    letter-spacing: -0.5px;
+  }
+}
+
+.services__link {
+  padding: 0;
+  letter-spacing: 0.2px;
+  line-height: 21px;
+  color: @dark-blue;
+  border-bottom: 1px dotted @dark-blue;
+  max-width: min-content;
+
+  @media (min-width: @desktop-width) {
+    line-height: 17px;
+    color: @black;
+    border: none;
+    font-size: 25px;
+    font-weight: 600px;
+    text-align: left;
+    padding-top: 0;
+    letter-spacing: -0.55px;
+  }
+}
+
+.services__img {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    min-width: 320px;
+    height: auto;
+    margin-left: 40px;
+  }
+}
+
+.services__item:nth-child(even) .services__img {
+  order: -1;
+  margin-left: 0;
+  margin-right: 40px;
+}
+
+.item-content {
+  display: none;
+  font-size: 16px;
+  margin-top: 27px;
+  margin-left: 10px;
+  margin-right: 2px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+.item-content__description {
+  margin: 13px 0;
+}
+
+.item-content .item-content__description:nth-child(2) {
+  @media (min-width: @desktop-width) {
+    margin-top: -3px;
+  }
+}
+
+.item-content__subtitle {
+  color: @red;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-top: 21px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+  }
+}
+
+.item-content__subtitle-description {
+  margin-top: 0;
+}
+
+.rosreestr-link {
+  color: @dark-blue;
+  text-decoration: underline;
+  display: inline-block;
+
+  &:hover,
+  &focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .services__input:checked ~ .item-content {
+    display: block;
+  }
+
+  .services__item:focus .services__label,
+  .services__item:hover .services__label {
+    opacity: 0.7;
+  }
+
+  .services__item:active .services__label {
+    opacity: 0.5;
+  }
+}
+
+.services__label::after {
+  position: absolute;
+  right: 6px;
+  top: -11px;
+  display: block;
+  transition: all 0.3s;
+  content: url("../img/ic_dropdown-arrow.svg");
+  z-index: 3;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.services__label::before {
+  position: absolute;
+  left: -2px;
+  top: -18px;
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  width: 55px;
+  height: 55px;
+  z-index: 3;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.services__label--penalties::before {
+  background-image: url("../img/ic_gibdd1.svg");
+}
+
+.services__label--legal-debts::before {
+  background-image: url("../img/ic_fssp.svg");
+}
+
+.services__label--taxes::before {
+  background-image: url("../img/ic_nalog.svg");
+}
+
+.services__label--rosreestr::before {
+  background-image: url("../img/ic_rr.svg");
+}
+
+.services__input:checked + .services__label::after {
+  transform: rotate(180deg);
+  top: -14px;
+}

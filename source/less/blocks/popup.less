@@ -1,0 +1,134 @@
+.popup {
+  display: none;
+  height: 640px;
+  width: 366px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background-color: @white;
+  border: 1px solid @grey;
+  text-align: left;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 15;
+  box-shadow: 0 0 0 1000vw rgba(50, 50, 50, 1);
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    height: 469px;
+  }
+}
+
+.popup__wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 320px;
+}
+
+.close-button {
+  position: absolute;
+  top: 14px;
+  right: -7px;
+  width: 22px;
+  height: 20px;
+  cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    right: -27px;
+  }
+}
+
+.popup-show {
+  display: block;
+  z-index: 40;
+}
+
+.popup-form__input:invalid {
+  border-color: @red;
+  color: @red;
+}
+
+.popup-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 23px;
+  color: @black;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 38px;
+  }
+}
+
+.popup-form__fieldset {
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup-form__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 32px;
+  list-style: none;
+}
+
+.popup-form__item {
+  margin-top: 18px;
+}
+
+.popup-form__input {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid @blue-grey;
+  padding: 19px 24px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-form__button {
+  margin: 0;
+  margin-top: 24px;
+  font-size: 24px;
+  padding: 17px 32px;
+  width: 100%;
+  letter-spacing: 0.8px;
+  opacity: 1;
+}
+
+.popup-form__button:focus,
+.popup-form__button:hover {
+  opacity: 0.9;
+}
+
+.popup-form__button:active {
+  opacity: 0.6;
+}
+
+.popup__links {
+  margin-top: 20px;
+}
+
+.popup__link {
+  padding-top: 11px;
+  color: @dark-blue;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: min-content;
+  border-bottom: 1px dotted @dark-blue;
+}
+
+.popup__link:hover,
+.popup__link:focus {
+  opacity: 0.7;
+}
+
+.popup__link:active {
+  opacity: 0.4;
+}
